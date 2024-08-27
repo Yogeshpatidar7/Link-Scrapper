@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Link Scraper",
+    "version": "1.0",
+    "description": "Scrape internal, external, and broken links from a webpage.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "popup.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"]
+      }
+    ]
+  }
+  
